@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-31T05:24:20.010Z</updated>
+  <updated>2022-10-31T06:39:03.708Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bp</title>
+    <link href="http://example.com/2022/10/31/bp/"/>
+    <id>http://example.com/2022/10/31/bp/</id>
+    <published>2022-10-31T06:14:46.000Z</published>
+    <updated>2022-10-31T06:39:03.708Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我也不知道写什么"><a href="#我也不知道写什么" class="headerlink" title="我也不知道写什么"></a>我也不知道写什么</h1><h1 id="hexo搭建博客杂记"><a href="#hexo搭建博客杂记" class="headerlink" title="hexo搭建博客杂记"></a>hexo搭建博客杂记</h1><p>图片转换格式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sips -s format [格式名称] [文件名] --out [输出文件的名称]</span><br><span class="line">sips -s format jpeg logo.jpeg --out png//单个文件</span><br><span class="line">for i in [文件名列表]; do sips -s format [格式名称] $i --out [终点]/$i.[格式名称];done</span><br><span class="line">for i in *.png; do sips -s format jpeg $i --out $&#123;i%.*&#125;.jpg;done;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;我也不知道写什么&quot;&gt;&lt;a href=&quot;#我也不知道写什么&quot; class=&quot;headerlink&quot; title=&quot;我也不知道写什么&quot;&gt;&lt;/a&gt;我也不知道写什么&lt;/h1&gt;&lt;h1 id=&quot;hexo搭建博客杂记&quot;&gt;&lt;a href=&quot;#hexo搭建博客杂记&quot; class=&quot;</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    
+    
+    <category term="misc" scheme="http://example.com/tags/misc/"/>
+    
+  </entry>
   
   <entry>
     <title>最新版的burpsuit</title>

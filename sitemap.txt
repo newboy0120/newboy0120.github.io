@@ -1,3 +1,6 @@
+http://example.com/2022/10/31/bp/
 http://example.com/2022/10/31/%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84burpsuit/
 http://example.com/2022/10/31/hello-world/
 http://example.com/
+http://example.com/tags/misc/
+http://example.com/categories/hexo/
