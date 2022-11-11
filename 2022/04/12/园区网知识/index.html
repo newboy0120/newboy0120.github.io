@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-12T11:56:48.000Z">
-<meta property="article:modified_time" content="2022-11-03T10:41:50.438Z">
+<meta property="article:modified_time" content="2022-11-11T02:53:07.423Z">
 <meta property="article:author" content="Xiao XU">
 <meta property="article:tag" content="路由交换">
 <meta name="twitter:card" content="summary">
@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1668135076020),
+    lastupdate: new Date(1668135195683),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2878,27 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p><strong>子网规划：一般情况来讲，左到右，上到下，使用从小到大的数字标识</strong></p>
 <p><strong>子网掩码：为了保证安全的特性，一般将掩码给予相应的规划，精确到所划分的位置</strong></p>
-<h3 id="DHCP基本配置"><a href="#DHCP基本配置" class="headerlink" title="DHCP基本配置"></a>DHCP基本配置</h3><h4 id="接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）"><a href="#接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）" class="headerlink" title="接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）"></a>接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）</h4><details>
-    <summary>前导知识</summary>
-</detail>
-背景<br/>
-    为了节省时间，以及优化配置、集中管理，常采用地址池的方法给PC机分配地址<br/>
-工作原理<br/>
-    主机寻找DHCP服务器（广播报文），服务器分配未用的IP地址，<del>多个DHCP服务器时，都会进行响应，主机以第一个为准</del>，主机对所获取的ip地址信息向DHCP服务器做确认（广播），DHCP服务器对主机的确认做一个回复<br/>
-租期更新<br/>
-在租约期限达到50%，客户端开始请求更新IP地址的租期<br/>
-在申请到IP地址后，客户端存储三个定时器：租期更新、租期重绑定和租期失效（是服务器分配的），如果DHCP没指定时间，默认缺省，时间是1天。<br/>
-重绑定<br/>
-在达到87.5%的时候，没收到服务器相应，会申请重新绑定IP<br/>
-DHCP客户端发送DHCP请求报文续租时，如果DHCP客户端没有收到DHCP服务器的DHCP应答报文。默认情况下，重绑定定时器在租期剩余12.5%的时候超时，超时后，DHCP客户端会认为原DHCP服务器不可用，开始重新发送DHCP请求报文。网络上任何一台DHCP服务器都可以应答DHCP确认或DHCP非确认报文。<br/>
-如果收到DHCP确认报文，DHCP客户端重新进入绑定状态，复位租期更新定时器和重绑定定时器。如果收到DHCP非确认报文，DHCP客户端进入初始化状态。此时，DHCP客户端必须立刻停止使用现有IP地址，重新申请IP地址。<br/>
-释放<br/>
-如果到期了，还没有收到服务器的响应，客户端停止使用
-如果没到期，可以通过release报文，主动释放IP地址<br/>
-分配Ip地址顺序<br/>
-MAC静态绑定的IP-->已使用过的IP-->空闲状态的IP-->超过租期的IP-->产生冲突的IP
-
-
+<h3 id="DHCP基本配置"><a href="#DHCP基本配置" class="headerlink" title="DHCP基本配置"></a>DHCP基本配置</h3><h4 id="接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）"><a href="#接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）" class="headerlink" title="接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）"></a>接口下使能DHCP功能，选择DHCP获取方式（接口下，全局地址池下）</h4><p>背景<br/><br>    为了节省时间，以及优化配置、集中管理，常采用地址池的方法给PC机分配地址<br/><br>工作原理<br/><br>    主机寻找DHCP服务器（广播报文），服务器分配未用的IP地址，<del>多个DHCP服务器时，都会进行响应，主机以第一个为准</del>，主机对所获取的ip地址信息向DHCP服务器做确认（广播），DHCP服务器对主机的确认做一个回复<br/><br>租期更新<br/><br>在租约期限达到50%，客户端开始请求更新IP地址的租期<br/><br>在申请到IP地址后，客户端存储三个定时器：租期更新、租期重绑定和租期失效（是服务器分配的），如果DHCP没指定时间，默认缺省，时间是1天。<br/><br>重绑定<br/><br>在达到87.5%的时候，没收到服务器相应，会申请重新绑定IP<br/><br>DHCP客户端发送DHCP请求报文续租时，如果DHCP客户端没有收到DHCP服务器的DHCP应答报文。默认情况下，重绑定定时器在租期剩余12.5%的时候超时，超时后，DHCP客户端会认为原DHCP服务器不可用，开始重新发送DHCP请求报文。网络上任何一台DHCP服务器都可以应答DHCP确认或DHCP非确认报文。<br/><br>如果收到DHCP确认报文，DHCP客户端重新进入绑定状态，复位租期更新定时器和重绑定定时器。如果收到DHCP非确认报文，DHCP客户端进入初始化状态。此时，DHCP客户端必须立刻停止使用现有IP地址，重新申请IP地址。<br/><br>释放<br/><br>如果到期了，还没有收到服务器的响应，客户端停止使用<br>如果没到期，可以通过release报文，主动释放IP地址<br/><br>分配Ip地址顺序<br/><br>MAC静态绑定的IP–&gt;已使用过的IP–&gt;空闲状态的IP–&gt;超过租期的IP–&gt;产生冲突的IP</p>
 <ul>
 <li><p>接口下</p>
 <ul>
@@ -3209,10 +3189,10 @@ MAC静态绑定的IP-->已使用过的IP-->空闲状态的IP-->超过租期的IP
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-03T18:41:50+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-11T10:53:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年11月3日</p>
+    <p>更新于：2022年11月11日</p>
   </a>
 </div>
 
@@ -3292,15 +3272,22 @@ MAC静态绑定的IP-->已使用过的IP-->空闲状态的IP-->超过租期的IP
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0--ctfshow/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>信息搜集--ctfshow</p>
+        <a class='prev' href='/2022/04/12/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C--ctfshow/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>命令执行--ctfshow</p>
+          <p class='content'>web29—-使用shell命令system直接获取php语句的最后一句可以没有分号
+web30—–反义号进行命令执行可以将源文件进行复制为一个新的文件，然后直接访问该文件
+过滤了system(...</p>
+        </a>
+      
+      
+        <a class='next' href='/2022/04/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0--ctfshow/'>
+          <p class='title'>信息搜集--ctfshow<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>文件上传—ctfshow写在前面一句话木马
 1&lt;?php eval($_POST[&#x27;a&#x27;]); ?&gt;
 
 151——–后端无验证
 直接上穿无法进行，显示不支持格式，...</p>
         </a>
-      
       
     </div>
   
@@ -4365,7 +4352,7 @@ MAC静态绑定的IP-->已使用过的IP-->空闲状态的IP-->超过租期的IP
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":3,"item":{"@id":"http://piaopiao.love/2022/04/12/园区网知识/","name":"园区网知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"园区网知识","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://piaopiao.love/2022/04/12/%E5%9B%AD%E5%8C%BA%E7%BD%91%E7%9F%A5%E8%AF%86/"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://piaopiao.love/2022/04/12/%E5%9B%AD%E5%8C%BA%E7%BD%91%E7%9F%A5%E8%AF%86/","wordCount":0,"datePublished":"2022-04-12T11:56:48.000Z","dateModified":"2022-11-03T10:41:50.438Z","keywords":"路由交换","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":3,"item":{"@id":"http://piaopiao.love/2022/04/12/园区网知识/","name":"园区网知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"园区网知识","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://piaopiao.love/2022/04/12/%E5%9B%AD%E5%8C%BA%E7%BD%91%E7%9F%A5%E8%AF%86/"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://piaopiao.love/2022/04/12/%E5%9B%AD%E5%8C%BA%E7%BD%91%E7%9F%A5%E8%AF%86/","wordCount":0,"datePublished":"2022-04-12T11:56:48.000Z","dateModified":"2022-11-11T02:53:07.423Z","keywords":"路由交换","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
