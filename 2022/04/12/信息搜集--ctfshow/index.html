@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-12T11:56:48.000Z">
-<meta property="article:modified_time" content="2022-11-03T07:22:49.921Z">
+<meta property="article:modified_time" content="2022-11-11T02:16:03.513Z">
 <meta property="article:author" content="Xiao XU">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1668065549139),
+    lastupdate: new Date(1668133771121),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2883,6 +2883,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="web19—–JS的AES加密"><a href="#web19—–JS的AES加密" class="headerlink" title="web19—–JS的AES加密"></a>web19—–JS的AES加密</h2><p>查看源码，看看代码，然后有个加密的值，我们直接绕过，传过去所需要的参数</p>
 <h2 id="web20—–asp程序的数据库"><a href="#web20—–asp程序的数据库" class="headerlink" title="web20—–asp程序的数据库"></a>web20—–asp程序的数据库</h2><p>asp数据作为文件存储，我们使用访问文件夹，dm&#x2F;data.mdb或&#x2F;dm&#x2F;db.mdb进行下载，在数据库中找到我们需要的flag，可以直接搜索flag，进行尝试</p>
 <p>Note：防止数据库下的方法有在名字里面加#号的，我们可以直接使用%23进行绕过</p>
+<h2 id="web17—–备份的sql文件"><a href="#web17—–备份的sql文件" class="headerlink" title="web17—–备份的sql文件"></a>web17—–备份的sql文件</h2><p>直接在网址后面加上backup.sql，就会下载文件，我们sublime打开，就会找到flag</p>
 
   </div>
   
@@ -2907,10 +2908,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-03T15:22:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-11T10:16:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年11月3日</p>
+    <p>更新于：2022年11月11日</p>
   </a>
 </div>
 
@@ -3060,7 +3061,7 @@ web30—–反义号进行命令执行可以将源文件进行复制为一个新
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#web1"><span class="toc-text">web1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web2%E2%80%94%E2%80%93%E5%89%8D%E5%8F%B0js%E7%BB%95%E8%BF%87"><span class="toc-text">web2—–前台js绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web3%E2%80%94%E2%80%93%E6%8A%93%E5%8C%85%E6%9F%A5%E7%9C%8B"><span class="toc-text">web3—–抓包查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web4%E2%80%94%E2%80%93rebots-txt"><span class="toc-text">web4—–rebots.txt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web5%E2%80%94-phps%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="toc-text">web5—-phps下载源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web6%E2%80%94%E2%80%93www-zip%E6%BA%90%E7%A0%81%E5%8C%85"><span class="toc-text">web6—–www.zip源码包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web7%E2%80%94%E2%80%93-XX%E7%9A%84%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="toc-text">web7—–.XX的隐藏文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web8%E2%80%94%E2%80%93"><span class="toc-text">web8—–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web9%E2%80%94%E2%80%93-swp%E7%9A%84%E4%BA%A4%E6%8D%A2%E6%96%87%E4%BB%B6"><span class="toc-text">web9—–.swp的交换文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web10%E2%80%94%E2%80%93cookie%E4%B8%AD%E9%9A%90%E8%97%8Fflag"><span class="toc-text">web10—–cookie中隐藏flag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web11%E2%80%94%E2%80%93%E5%9F%9F%E5%90%8D%E9%9A%90%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">web11—–域名隐藏信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web12%E2%80%94%E2%80%93%E5%BC%B1%E5%8F%A3%E4%BB%A4"><span class="toc-text">web12—–弱口令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web13%E2%80%94%E2%80%93"><span class="toc-text">web13—–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web14%E2%80%94%E2%80%93editor%E6%B3%84%E9%9C%B2"><span class="toc-text">web14—–editor泄露</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web15%E2%80%94%E2%80%93%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6"><span class="toc-text">web15—–社会工程学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web16%E2%80%94%E2%80%93phpinfo%E6%B3%84%E9%9C%B2"><span class="toc-text">web16—–phpinfo泄露</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web17%E2%80%94%E2%80%93cdn"><span class="toc-text">web17—–cdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web18%E2%80%94%E2%80%93JS"><span class="toc-text">web18—–JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web19%E2%80%94%E2%80%93JS%E7%9A%84AES%E5%8A%A0%E5%AF%86"><span class="toc-text">web19—–JS的AES加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web20%E2%80%94%E2%80%93asp%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">web20—–asp程序的数据库</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#web1"><span class="toc-text">web1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web2%E2%80%94%E2%80%93%E5%89%8D%E5%8F%B0js%E7%BB%95%E8%BF%87"><span class="toc-text">web2—–前台js绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web3%E2%80%94%E2%80%93%E6%8A%93%E5%8C%85%E6%9F%A5%E7%9C%8B"><span class="toc-text">web3—–抓包查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web4%E2%80%94%E2%80%93rebots-txt"><span class="toc-text">web4—–rebots.txt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web5%E2%80%94-phps%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="toc-text">web5—-phps下载源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web6%E2%80%94%E2%80%93www-zip%E6%BA%90%E7%A0%81%E5%8C%85"><span class="toc-text">web6—–www.zip源码包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web7%E2%80%94%E2%80%93-XX%E7%9A%84%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="toc-text">web7—–.XX的隐藏文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web8%E2%80%94%E2%80%93"><span class="toc-text">web8—–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web9%E2%80%94%E2%80%93-swp%E7%9A%84%E4%BA%A4%E6%8D%A2%E6%96%87%E4%BB%B6"><span class="toc-text">web9—–.swp的交换文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web10%E2%80%94%E2%80%93cookie%E4%B8%AD%E9%9A%90%E8%97%8Fflag"><span class="toc-text">web10—–cookie中隐藏flag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web11%E2%80%94%E2%80%93%E5%9F%9F%E5%90%8D%E9%9A%90%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">web11—–域名隐藏信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web12%E2%80%94%E2%80%93%E5%BC%B1%E5%8F%A3%E4%BB%A4"><span class="toc-text">web12—–弱口令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web13%E2%80%94%E2%80%93"><span class="toc-text">web13—–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web14%E2%80%94%E2%80%93editor%E6%B3%84%E9%9C%B2"><span class="toc-text">web14—–editor泄露</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web15%E2%80%94%E2%80%93%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6"><span class="toc-text">web15—–社会工程学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web16%E2%80%94%E2%80%93phpinfo%E6%B3%84%E9%9C%B2"><span class="toc-text">web16—–phpinfo泄露</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web17%E2%80%94%E2%80%93cdn"><span class="toc-text">web17—–cdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web18%E2%80%94%E2%80%93JS"><span class="toc-text">web18—–JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web19%E2%80%94%E2%80%93JS%E7%9A%84AES%E5%8A%A0%E5%AF%86"><span class="toc-text">web19—–JS的AES加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web20%E2%80%94%E2%80%93asp%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">web20—–asp程序的数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web17%E2%80%94%E2%80%93%E5%A4%87%E4%BB%BD%E7%9A%84sql%E6%96%87%E4%BB%B6"><span class="toc-text">web17—–备份的sql文件</span></a></li></ol>
     </div>
   </section>
 
@@ -3755,29 +3756,52 @@ web30—–反义号进行命令执行可以将源文件进行复制为一个新
 
 
 
-      <script type="text/javascript">
-  volantis.layoutHelper("comments",`<div id="gitalk-container"></div>`)
-  function pjax_gitalk() {
-    if(!document.querySelector("#gitalk-container"))return;
-    let path = pdata.commentPath;
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
     }
-    if (document.getElementById('gitalk-container') != null) {
-      var gitalk = new Gitalk(
-        Object.assign(
-          Object.assign({"js":"https://unpkg.com/gitalk@1/dist/gitalk.min.js","clientID":"76804350318c4ea32c47","clientSecret":"51c365e09487c663c1457f7e877b9b40cf4573dd","repo":"https://github.com/newboy0120/gitalk","owner":"newboy0120","admin":"newboy0120","path":null}, {
-            id: path,
-            distractionFreeMode: false  // Facebook-like distraction free mode
-          }),
-        pdata.commentConfig)
-      );
-      gitalk.render('gitalk-container');
-    }
+
+    return document.getElementById("giscus_container");
   }
-  volantis.js('https://unpkg.com/gitalk@1/dist/gitalk.min.js').then(pjax_gitalk)
-  volantis.pjax.push(pjax_gitalk);
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"newboy0120/commments","repo-id":"R_kgDOIabD8g","category":"Announcements","category-id":"DIC_kwDOIabD8s4CSfQv","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
 </script>
 
     
@@ -4045,7 +4069,7 @@ web30—–反义号进行命令执行可以将源文件进行复制为一个新
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":3,"item":{"@id":"http://piaopiao.love/2022/04/12/信息搜集--ctfshow/","name":"信息搜集--ctfshow"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"信息搜集--ctfshow","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://piaopiao.love/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://piaopiao.love/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/","wordCount":0,"datePublished":"2022-04-12T11:56:48.000Z","dateModified":"2022-11-03T07:22:49.921Z","keywords":"CTF","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":3,"item":{"@id":"http://piaopiao.love/2022/04/12/信息搜集--ctfshow/","name":"信息搜集--ctfshow"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"信息搜集--ctfshow","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://piaopiao.love/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://piaopiao.love/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/","wordCount":0,"datePublished":"2022-04-12T11:56:48.000Z","dateModified":"2022-11-11T02:16:03.513Z","keywords":"CTF","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
