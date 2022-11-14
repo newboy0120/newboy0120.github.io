@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://piaopiao.love/tags/ctf/"/>
+  
+  <link rel="canonical" href="http://piaopiao.love/2022/11/14/vrrp的实现/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,18 +32,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：CTF - 小徐的絮絮叨叨</title>
-  <meta name="keywords" content="null">
+  <title>VRRP的实现 - 小徐的絮絮叨叨</title>
+  <meta name="keywords" content="路由交换mt,null">
   <meta desc name="description" content="111 - Xiao XU - 小徐的絮絮叨叨">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="小徐的絮絮叨叨">
-<meta property="og:url" content="http://piaopiao.love/tags/CTF/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VRRP的实现">
+<meta property="og:url" content="http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="小徐的絮絮叨叨">
-<meta property="og:description" content="111">
+<meta property="og:description" content="写在前面这是mt老师，上课的时候，做的一个小实验，浅浅的记录一下 topo图配置配置IP地址R1123456syssys R1int g 0&#x2F;0&#x2F;0ip add 192.168.0.253 24int g 0&#x2F;0&#x2F;1ip add 10.0.13.1 24  R2123456syssys R2int g 0&#x2F;0&#x2F;0ip add 192.168.0.252 24int g 0&#x2F;0&#x2F;1ip add 10">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-11-14T03:04:47.000Z">
+<meta property="article:modified_time" content="2022-11-14T03:19:10.522Z">
 <meta property="article:author" content="Xiao XU">
+<meta property="article:tag" content="路由交换mt">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2690,7 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://s1.ax1x.com/2022/07/15/j4Pgr4.jpg"></div>
 
@@ -2773,29 +2776,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://piaopiao.love/2022/04/12/信息搜集--ctfshow/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://piaopiao.love/2022/11/14/VRRP的实现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="小徐的絮絮叨叨">
   </span>
@@ -2804,189 +2787,235 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="111">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/"  itemprop="url">
-        信息搜集--ctfshow
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        信息搜集–ctfshowweb1查看源码
-web2—–前台js绕过
-打开开发者工具即可打开
-ctrl+shfit+i
-换成view-source协议也是可以的
-通过开发者工具查看网络，中的response，查看源码
+    
+      <h1 class="title" itemprop="name headline">
+        VRRP的实现
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="http://81.68.68.182/i/2022/11/04/6364e8b866331.jpeg" class="lazyload" data-srcset="http://81.68.68.182/i/2022/11/04/6364e8b866331.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">小徐</p>
+  </a>
+</div>
 
-web3—–抓包查看开发整工具，network抓包查看http协议头，有个flag头
-web4—–rebots.txt访问rebots.txt这个地址查看，有个不允许访问的，我...
-      
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-11-14T11:04:47+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年11月14日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>这是mt老师，上课的时候，做的一个小实验，浅浅的记录一下</p>
+<h1 id="topo图"><a href="#topo图" class="headerlink" title="topo图"></a>topo图</h1><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="配置IP地址"><a href="#配置IP地址" class="headerlink" title="配置IP地址"></a>配置IP地址</h2><h3 id="R1"><a href="#R1" class="headerlink" title="R1"></a>R1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">sys R1</span><br><span class="line">int g 0/0/0</span><br><span class="line">ip add 192.168.0.253 24</span><br><span class="line">int g 0/0/1</span><br><span class="line">ip add 10.0.13.1 24</span><br></pre></td></tr></table></figure>
+
+<h3 id="R2"><a href="#R2" class="headerlink" title="R2"></a>R2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">sys R2</span><br><span class="line">int g 0/0/0</span><br><span class="line">ip add 192.168.0.252 24</span><br><span class="line">int g 0/0/1</span><br><span class="line">ip add 10.0.23.2 24</span><br></pre></td></tr></table></figure>
+
+<h3 id="R3"><a href="#R3" class="headerlink" title="R3"></a>R3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">sys R3</span><br><span class="line">int g 0/0/0</span><br><span class="line">ip add 10.0.13.3 24</span><br><span class="line">int g 0/0/1</span><br><span class="line">ip add 10.0.23.3 24</span><br><span class="line">int g 0/0/2</span><br><span class="line">ip add 10.0.35.254 24</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置VRRP的网管冗余"><a href="#配置VRRP的网管冗余" class="headerlink" title="配置VRRP的网管冗余"></a>配置VRRP的网管冗余</h2><h3 id="R1-1"><a href="#R1-1" class="headerlink" title="R1"></a>R1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int g 0/0/0 </span><br><span class="line">vrrp vrid 1 virturl-ip 192.168.0.254</span><br><span class="line">vrrp vrid 1 pri 120</span><br><span class="line">vrrp vrid 2 virtual-ip 192.168.0.253</span><br></pre></td></tr></table></figure>
+
+<h3 id="R2-1"><a href="#R2-1" class="headerlink" title="R2"></a>R2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int g 0/0/0</span><br><span class="line">vrrp vrid 1 virturl-ip 192.168.0.254</span><br><span class="line">vrrp vrid 2 virtual-ip 192.168.0.253</span><br><span class="line">vrrp vrid 2 pri 120</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display vrrp brief</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置网路互通"><a href="#配置网路互通" class="headerlink" title="配置网路互通"></a>配置网路互通</h2><h3 id="R1-2"><a href="#R1-2" class="headerlink" title="R1"></a>R1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ospf 1</span><br><span class="line">a 0 </span><br><span class="line">net 192.168.0.0 0.0.0.255</span><br><span class="line">net 10.0.13.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<h3 id="R2-2"><a href="#R2-2" class="headerlink" title="R2"></a>R2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ospf 1 </span><br><span class="line">a 0</span><br><span class="line">net 192.168.0.0 0.0.0.255</span><br><span class="line">net 10.0.23.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<h3 id="R3-1"><a href="#R3-1" class="headerlink" title="R3"></a>R3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ospf 1 </span><br><span class="line">a 0 </span><br><span class="line">net 10.0.13.0 0.0.0.255</span><br><span class="line">net 10.0.23.0 0.0.0.255</span><br><span class="line">net 10.0.35.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查ospf邻居是否建立"><a href="#检查ospf邻居是否建立" class="headerlink" title="检查ospf邻居是否建立"></a>检查ospf邻居是否建立</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display ospf peer brif</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查R3上是否有192-168-0-0-x2F-24的路由"><a href="#检查R3上是否有192-168-0-0-x2F-24的路由" class="headerlink" title="检查R3上是否有192.168.0.0&#x2F;24的路由"></a>检查R3上是否有192.168.0.0&#x2F;24的路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dis ip rou</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看是否可以ping通"><a href="#查看是否可以ping通" class="headerlink" title="查看是否可以ping通"></a>查看是否可以ping通</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping 10.0.35.5				//在左侧PC上ping，看是否可以通信</span><br><span class="line">tracert 10.0.35.5			//ping通后，查看所走的路径是什么</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看备份是否启用"><a href="#查看备份是否启用" class="headerlink" title="查看备份是否启用"></a>查看备份是否启用</h2><ol>
+<li>模拟R1与交换机互联的端口断掉</li>
+<li>在R1检查<code>dis vrrp biref</code>，看vrrp组状态如何</li>
+<li>在刚刚ping的pc上，再次测试联通性，和追踪路径</li>
+</ol>
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-12T19:56:48+08:00">2022-04-12</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/04/12/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86--ctfshow/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-14T11:19:10+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年11月14日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://piaopiao.love/2022/04/12/命令执行--ctfshow/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="小徐的絮絮叨叨">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="小徐的絮絮叨叨">
-    <meta itemprop="description" content="111">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2mt/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>路由交换mt</p></a></div>
+  <span hidden itemprop="keywords">路由交换mt</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=VRRP的实现 - 小徐的絮絮叨叨&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=VRRP的实现 - 小徐的絮絮叨叨&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=VRRP的实现 - 小徐的絮絮叨叨&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/11/10/python%E6%9D%82%E8%AE%B0/'>
+          <p class='title'>python杂记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>写在前面思来想去还是把python在好好的看一下吧，不能浪费了当时买的电子书，看一看学一下，记录一下学习历程。吵吵嚷嚷着学python好久好久了，也不能说是没学，反正到现在为止，能看懂pytho...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/12/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C--ctfshow/"  itemprop="url">
-        命令执行--ctfshow
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        web29—-使用shell命令system直接获取php语句的最后一句可以没有分号
-web30—–反义号进行命令执行可以将源文件进行复制为一个新的文件，然后直接访问该文件
-过滤了system()，我们使用&#96;来进行绕过
-web31—-逃逸正则匹配这里的东西就多了起来，我们使用逃逸
-1?c=eval($_GET[1]);&amp;1=system(tac f*);
 
-也就是说，我们这里...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-12T19:56:48+08:00">2022-04-12</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/12/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C--ctfshow/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://piaopiao.love/2022/04/12/文件上传--ctfshow/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="小徐的絮絮叨叨">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="小徐的絮絮叨叨">
-    <meta itemprop="description" content="111">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0--ctfshow/"  itemprop="url">
-        信息搜集--ctfshow
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        文件上传—ctfshow写在前面一句话木马
-1&lt;?php eval($_POST[&#x27;a&#x27;]); ?&gt;
-
-151——–后端无验证
-直接上穿无法进行，显示不支持格式，而且在bp中没有抓到相应的流量，我们猜测这是在客户端的一个js的一个检测，这时候我们有两种绕过方法
-
-在前端中禁用js、或者直接在js代码中添加.php的允许条目，异或将js前端校验的代码直接删除
-使...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-12T19:56:48+08:00">2022-04-12</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0--ctfshow/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2995,112 +3024,48 @@ web31—-逃逸正则匹配这里的东西就多了起来，我们使用逃逸
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='http://81.68.68.182/i/2022/11/04/6364e8b866331.jpeg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">小徐的絮絮叨叨</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:2351793316@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/newboy0120/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CTF/" style="font-size: 24px; color: #555">CTF</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/tools/" style="font-size: 14px; color: #999">tools</a> <a href="/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/" style="font-size: 14px; color: #999">路由交换</a> <a href="/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2mt/" style="font-size: 14px; color: #999">路由交换mt</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEIP%E5%9C%B0%E5%9D%80"><span class="toc-text">配置IP地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#R1"><span class="toc-text">R1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#R2"><span class="toc-text">R2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#R3"><span class="toc-text">R3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEVRRP%E7%9A%84%E7%BD%91%E7%AE%A1%E5%86%97%E4%BD%99"><span class="toc-text">配置VRRP的网管冗余</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#R1-1"><span class="toc-text">R1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#R2-1"><span class="toc-text">R2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5"><span class="toc-text">检查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%BD%91%E8%B7%AF%E4%BA%92%E9%80%9A"><span class="toc-text">配置网路互通</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#R1-2"><span class="toc-text">R1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#R2-2"><span class="toc-text">R2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#R3-1"><span class="toc-text">R3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5ospf%E9%82%BB%E5%B1%85%E6%98%AF%E5%90%A6%E5%BB%BA%E7%AB%8B"><span class="toc-text">检查ospf邻居是否建立</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5R3%E4%B8%8A%E6%98%AF%E5%90%A6%E6%9C%89192-168-0-0-x2F-24%E7%9A%84%E8%B7%AF%E7%94%B1"><span class="toc-text">检查R3上是否有192.168.0.0&#x2F;24的路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5ping%E9%80%9A"><span class="toc-text">查看是否可以ping通</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%A4%87%E4%BB%BD%E6%98%AF%E5%90%A6%E5%90%AF%E7%94%A8"><span class="toc-text">查看备份是否启用</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3128,13 +3093,14 @@ web31—-逃逸正则匹配这里的东西就多了起来，我们使用逃逸
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4086,7 +4052,7 @@ web31—-逃逸正则匹配这里的东西就多了起来，我们使用逃逸
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":2,"item":{"@id":"http://piaopiao.love/tags/CTF/","name":"CTF"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","sameAs":["https://github.com/volantis-x"],"description":"111"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://piaopiao.love/","name":"小徐的絮絮叨叨"}},{"@type":"ListItem","position":3,"item":{"@id":"http://piaopiao.love/2022/11/14/VRRP的实现/","name":"VRRP的实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","keywords":null,"description":"111","author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/","description":"111"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","url":"http://piaopiao.love/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://piaopiao.love?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"VRRP的实现","description":"111","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"Xiao XU","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://piaopiao.love/"},"publisher":{"@type":"Organization","name":"小徐的絮絮叨叨","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://piaopiao.love/2022/11/14/VRRP%E7%9A%84%E5%AE%9E%E7%8E%B0/","wordCount":0,"datePublished":"2022-11-14T03:04:47.000Z","dateModified":"2022-11-14T03:19:10.522Z","keywords":"路由交换mt","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
